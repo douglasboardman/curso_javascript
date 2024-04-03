@@ -82,7 +82,11 @@ function gravarArquivoCSV(csvContent, nomeArquivo) {
 //     .then(pessoasOrganizadasPorSexo)
 //     .then(resultado => console.log(resultado));
 
-gravarArquivoCSV(contentToCSV(pessoas), 'pessoas')
+// gravarArquivoCSV(contentToCSV(pessoas), 'pessoas')
+//     .then(result => console.log(result));
+
+listarPorGenero("Feminino", pessoas)
+    .then(result => gravarArquivoCSV(contentToCSV(result),"mulheres"))
     .then(result => console.log(result));
 
 //console.log(contentToCSV(pessoas));
