@@ -1,95 +1,82 @@
 import { pessoas } from './bd.mjs';
-import { writeFile,  } from 'fs';
+import { writeFile } from 'fs';
 
 
-function pessoasMaiores(pessoas) {
-    return new Promise((resolve, reject) => {
-        try {
-            const lista = pessoas.filter(p => p.idade >= 18);
-            resolve(lista);
-        } catch (error) {
-            reject(error);
-        }
-    });
+async function pessoasMaiores(pessoas) {
+    try {
+        const lista = await Promise.resolve(pessoas.filter(p => p.idade >= 18));
+        return lista;
+    } catch (error) {
+        throw error;
+    }
 }
 
-function pessoasMenores(pessoas) {
-    return new Promise((resolve, reject) => {
-        try {
-            const lista = pessoas.filter(p => p.idade < 18);
-            resolve(lista);
-        } catch (error) {
-            reject(error);
-        }
-    });
+async function pessoasMenores(pessoas) {
+    try {
+        const lista = await Promise.resolve(pessoas.filter(p => p.idade < 18));
+        return lista;
+    } catch (error) {
+        throw error;
+    }
 }
 
-function listarPorGenero(genero, pessoas) {
-    return new Promise((resolve, reject) => {
-        try {
-            const lista = pessoas.filter(p => p.sexo == genero);
-            resolve(lista);
-        } catch (error) {
-            reject(error);
-        }
-    });
+async function listarPorGenero(genero, pessoas) {
+    try {
+        const lista = await Promise.resolve(pessoas.filter(p => p.sexo == genero));
+        return lista;
+    } catch (error) {
+        throw error;
+    }
 }
 
-function pessoasOrganizadasPorSexo(pessoas) {
-    return new Promise((resolve, reject) => {
-        try {
-            const lista = pessoas.reduce(function(acumulador, itemAtual) {
-                if(itemAtual.sexo == "Masculino") {
-                    acumulador.homens.push(itemAtual);
-                } else {
-                    acumulador.mulheres.push(itemAtual);
-                }
-                return acumulador;
-            }, {homens: [], mulheres: []});
-            resolve(lista);
-        } catch (error) {
-            reject(error);
-        }
-    });
+async function pessoasOrganizadasPorSexo(pessoas) {
+    try {
+        const lista = await Promise.resolve(pessoas.reduce(function(acumulador, itemAtual) {
+            if(itemAtual.sexo == "Masculino") {
+                acumulador.homens.push(itemAtual);
+            } else {
+                acumulador.mulheres.push(itemAtual);
+            }
+            return acumulador;
+        }, {homens: [], mulheres: []}));
+        return lista;
+    } catch (error) {
+        throw error;
+    }
 }
 
-function contentToCSV(dados) {
+async function contentToCSV(dados) {
     let keys = Object.keys(dados[0]);
     let headers = keys.join(",") + "\n";
     let bodyData = dados.map(dados => `${dados.nome},${dados.sexo},${dados.idade}`).join("\n");
     return headers.toUpperCase() + bodyData;
 }
 
-function gravarArquivoCSV(csvContent, nomeArquivo) {
-    return new Promise((resolve, reject) => {
-        try {
-            
-            writeFile(`./arquivos/${nomeArquivo}.csv`, csvContent, (err) => { if(err) throw err });
-            resolve('Arquivo salvo com sucesso!');
-        } catch (error) {
-            reject(error)
-        }
-    })
+async function gravarArquivoCSV(csvContent, nomeArquivo) {
+    try {
+        await new Promise((resolve, reject) => {
+            writeFile(`./arquivos/${nomeArquivo}.csv`, csvContent, (err) => { if(err) reject(err); resolve(); });
+        });
+        return 'Arquivo salvo com sucesso!';
+    } catch (error) {
+        throw error
+    }
 }
 
 
 // lista de pessoas maiores de idade organizadas por sexo
-// pessoasMaiores(pessoas)
-//     .then(pessoasOrganizadasPorSexo)
-//     .then(resultado => console.log(resultado));
+// (async () => console.log(await pessoasMaiores(pessoas)
+//     .then(pessoasOrganizadasPorSexo)))();
 
-// pessoasMenores(pessoas)
-//     .then(pessoasOrganizadasPorSexo)
-//     .then(resultado => console.log(resultado));
+// (async () => console.log(await pessoasMenores(pessoas)
+//     .then(pessoasOrganizadasPorSexo)))();
 
-// gravarArquivoCSV(contentToCSV(pessoas), 'pessoas')
-//     .then(result => console.log(result));
+// (async () => console.log(await gravarArquivoCSV(await contentToCSV(pessoas), 'pessoas')))();
 
-listarPorGenero("Feminino", pessoas)
-    .then(result => gravarArquivoCSV(contentToCSV(result),"mulheres"))
-    .then(result => console.log(result));
+(async () => console.log(await listarPorGenero("Masculino", pessoas)
+    .then(async result => gravarArquivoCSV(await contentToCSV(result),"homens"))))();
 
-//console.log(contentToCSV(pessoas));
+//console.log(await contentToCSV(pessoas));
 
 
 
