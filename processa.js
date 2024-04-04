@@ -3,35 +3,50 @@
 const fs = require('fs');
 const arqs = ['./arquivos/arq1.txt', './arquivos/arq2.txt'];
 
-const iniNumbers = new Promise((resolve) => {
-    resolve(
-        console.log(1),
-        console.log(2),
-        console.log(3)
-    );
-});
+function iniNumbers() {
+    console.log(1);
+    console.log(2);
+    console.log(3);
+}
 
-const lastNumbers = new Promise((resolve) => {
-    resolve(
-        console.log(7),
-        console.log(8),
-        console.log(9)
-    );
-})
+function lastNumbers() {
+    console.log(7);
+    console.log(8);
+    console.log(9);
+}
 
-const fileUrl = './arquivos/arq1.txt';
+function finalNumbers() {
+    console.log(13);
+    console.log(14);
+    console.log(15);
+}
 
-const fileContent = new Promise((resolve, reject) => {
-    return fs.readFile(fileUrl, (err, result) => {
-        if (err) {
-            reject(err);
-        } else {
-            resolve(result);
-        }
-    });
-});
+async function fileContent(fileUrl) {
+    try {
+        const result = await new Promise((resolve, reject) => {
+            fs.readFile(fileUrl, (err, data) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(data);
+                }
+            });
+        });
+        return result;
+    } catch (error) {
+        throw error;
+    }
+};
 
-iniNumbers
-    .then(fileContent
-        .then(result => console.log(String(result)))
-            .then(lastNumbers));
+async function showNumbers() {
+    const midNumbers = await fileContent(arqs[0]);
+    const otherNumbers = await fileContent(arqs[1]);
+    
+    iniNumbers();
+    console.log(String(midNumbers));
+    lastNumbers();
+    console.log(String(otherNumbers));
+    finalNumbers();
+}
+
+showNumbers();
