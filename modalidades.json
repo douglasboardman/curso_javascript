@@ -1,0 +1,58 @@
+[
+    {
+      "codigo": "-99",
+      "descricao": "Pregão - Registro de Preço"
+    },
+    {
+      "codigo": "-98",
+      "descricao": "Concorrência Internacional - Registro de Preço"
+    },
+    {
+      "codigo": "-97",
+      "descricao": "Concorrência - Registro de Preço"
+    },
+    {
+      "codigo": "1",
+      "descricao": "Convite"
+    },
+    {
+      "codigo": "2",
+      "descricao": "Tomada de Preços"
+    },
+    {
+      "codigo": "3",
+      "descricao": "Concorrência"
+    },
+    {
+      "codigo": "4",
+      "descricao": "Concorrência Internacional"
+    },
+    {
+      "codigo": "5",
+      "descricao": "Pregão"
+    },
+    {
+      "codigo": "6",
+      "descricao": "Dispensa de Licitação"
+    },
+    {
+      "codigo": "7",
+      "descricao": "Inexigibilidade de Licitação"
+    },
+    {
+      "codigo": "20",
+      "descricao": "Concurso"
+    },
+    {
+      "codigo": "22",
+      "descricao": "Tomada de Preços por Técnica e Preço"
+    },
+    {
+      "codigo": "33",
+      "descricao": "Concorrência por Técnica e Preço"
+    },
+    {
+      "codigo": "44",
+      "descricao": "Concorrência Internacional por Técnica e Preço"
+    }
+  ]

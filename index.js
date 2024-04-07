@@ -1,43 +1,59 @@
-// EVENT LOOP ////////////////////////////////////////////////////////////////////////////////////////
+const axios = require("axios");
 
-// Exemplo 1
-// async function teste(){
-//     const promise1 = new Promise((resolve)=>{
-//         resolve("1")
-//     });
-    
-//     const promise2 = new Promise((resolve)=>{
-//         resolve("3")
-//     });
+const BASE_URL = "https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes";
+const codOrgao = 26420;
+const codLicitacao = '889585757';
+const dataInicial = "01/05/2023";
+const datafinal = "31/05/2023";
 
-//     promise1().then()
-//     await setTimeout(() => console.log(2), 0);     // Esta função só será executada no proximo loop de eventos, pois se trata de uma função assíncrona.
-    
-// }
+const strPeriodo = (pag) => {
+  const dataIni = dataInicial.split('/');
+  const dataFim = datafinal.split('/');
+  
+  let dIni = {
+    dia: String(dataIni[0]),
+    mes: String(dataIni[1]),
+    ano: String(dataIni[2])
+  }
 
-// teste();
+  let dFim = {
+    dia: String(dataFim[0]),
+    mes: String(dataFim[1]),
+    ano: String(dataFim[2])
+  }
+  
+  return `?dataInicial=${dIni.dia}%2F${dIni.mes}%2F${dIni.ano}&dataFinal=${dFim.dia}%2F${dFim.mes}%2F${dFim.ano}&codigoOrgao=${codOrgao}&pagina=${pag}`;
+}
 
+const axiosOptions = {
+  headers: {
+    "accept": '/',
+    "chave-api-dados": '55c2e0e0e45362fa469aaab45c36751b'
+  },
+}
 
-// Exemplo 2
+const getPage = async (path) => {
+  const url = `${BASE_URL}${path}`;
 
-// setTimeout(() => {                          // Esta função só será executada no proximo loop de eventos, pois se trata de uma função assíncrona.
-//     console.log("setTimout");
-// }, 1);
+  const content = await axios.get(url, axiosOptions);
+  return content;
+}
 
-// for(let i = 0; i<= 10000;i++){
-//     console.log(i);
-// }
+licitacoesPorPeriodo = async () => {
+  const dadosLicitacoes = await getPage(strPeriodo(1));
+  console.log(dadosLicitacoes.data);
+}
 
+licitacaoPorId = async () => {
+  const dadosLicitacao = await getPage('/' + codLicitacao);
+  console.log(dadosLicitacao.data);
+} 
 
-// Exemplo 3
+itensLicitacaoPorId = async () => {
+   const itensLicitacao = await getPage('/itens-licitados?id=' + codLicitacao);
+   console.log(itensLicitacao.data);
+}
 
-// const promise = new Promise(resolve => {    // A execução das promises é agendada para o final do atual loop de eventos, por isso é executado antes do setTimeout.
-//     let arr = [];
-//     for(let i = 10; i <= 60; i+=10){
-//         let random = Math.random();
-//         arr.push(Math.round(i*random));
-//     }
-//     resolve(arr);
-// });
+// itensLicitacaoPorId();
 
-// promise.then(arr => console.log(arr));
+licitacaoPorId();
