@@ -1,58 +1,179 @@
-[
-    {
-      "codigo": "-99",
-      "descricao": "Pregão - Registro de Preço"
+{
+  "numeroAtaRegistroPreco": "00048",
+  "anoAta": 2023,
+  "dataAssinatura": "2023-12-22",
+  "dataVigenciaInicio": "2023-12-23",
+  "dataVigenciaFim": "2024-12-23",
+  "dataCancelamento": null,
+  "cancelado": false,
+  "dataPublicacaoPncp": "2023-12-22T08:49:40",
+  "dataInclusao": "2023-12-22T08:49:40",
+  "dataAtualizacao": "2023-12-22T08:49:40",
+  "sequencialAta": 1,
+  "numeroControlePNCP": "10662072000158-1-000039/2023-000001",
+  "ata": {
+    "id": 71702,
+    "compra": {
+      "id": 5625542,
+      "modalidade": {
+        "id": 6,
+        "nome": "Pregão - Eletrônico",
+        "descricao": null,
+        "dataInclusao": "1900-01-01T00:00:00",
+        "dataAtualizacao": "2021-07-28T09:11:47",
+        "statusAtivo": true,
+        "justificativaAtualizacao": null
+      },
+      "numeroCompra": "00048",
+      "anoCompra": 2023,
+      "processo": "23243.005157/2023",
+      "tipoInstrumentoConvocatorio": {
+        "id": 1,
+        "nome": "Edital",
+        "descricao": "Instrumento convocatório utilizado no leilão, no diálogo competitivo, no concurso, na concorrência e no pregão.",
+        "dataInclusao": "2021-07-28T09:11:47",
+        "dataAtualizacao": "2023-12-15T14:59:42",
+        "statusAtivo": true,
+        "justificativaAtualizacao": null,
+        "obrigatoriedadeDataAberturaProposta": {
+          "id": 1,
+          "nome": "Obrigatório",
+          "descricao": null,
+          "dataInclusao": "2024-02-08T14:46:49",
+          "dataAtualizacao": "2024-02-08T14:46:49"
+        },
+        "obrigatoriedadeDataEncerramentoProposta": {
+          "id": 1,
+          "nome": "Obrigatório",
+          "descricao": null,
+          "dataInclusao": "2024-02-08T14:46:49",
+          "dataAtualizacao": "2024-02-08T14:46:49"
+        }
+      },
+      "situacaoCompra": 1,
+      "objetoCompra": "Aquisição de equipamentos de processamento de dados",
+      "informacaoComplementar": " Para as respostas de esclarecimentos e impugnações deste edital acesse o link: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=quadro-informativo&compra=15812705000482023",
+      "srp": true,
+      "dataAberturaProposta": "2023-11-27T08:00:00",
+      "dataEncerramentoProposta": "2023-12-07T09:00:00",
+      "dataPublicacaoPncp": "2023-11-27T07:08:25",
+      "dataInclusao": "2023-11-27T07:08:25",
+      "dataAtualizacao": "2023-11-27T07:08:25",
+      "sequencialCompra": 39,
+      "listaItensDescricao": null,
+      "orgaoEntidade": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50",
+        "codigoNaturezaJuridica": "1104",
+        "nomeFantasia": null,
+        "situacaoCadastral": null,
+        "motivoSituacaoCadastral": null,
+        "dataSituacaoCadastral": null,
+        "dataInclusao": "2021-07-28T09:13:50",
+        "dataAtualizacao": "2021-07-28T09:13:50"
+      },
+      "unidadeOrgao": {
+        "id": 7042,
+        "orgao": {
+          "id": 60595,
+          "cnpj": "10662072000158",
+          "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+          "cnpjEnteResponsavel": null,
+          "poderId": "E",
+          "esferaId": "F",
+          "validado": true,
+          "dataValidacao": "2021-07-28T09:13:50",
+          "codigoNaturezaJuridica": "1104",
+          "nomeFantasia": null,
+          "situacaoCadastral": null,
+          "motivoSituacaoCadastral": null,
+          "dataSituacaoCadastral": null,
+          "dataInclusao": "2021-07-28T09:13:50",
+          "dataAtualizacao": "2021-07-28T09:13:50"
+        },
+        "codigoUnidade": "158127",
+        "nomeUnidade": "INST.FEDERAL DE EDUC.,CIENC.E TEC.FARROUPILHA",
+        "municipio": {
+          "id": 4971,
+          "uf": {
+            "siglaUF": "RS",
+            "nomeUF": "Rio Grande do Sul",
+            "dataHoraRegistro": "2021-07-28T09:11:47"
+          },
+          "nome": "Santa Maria",
+          "codigoIbge": "4316907",
+          "dataHoraRegistro": "2021-07-28T09:12:08"
+        },
+        "dataInclusao": "2021-08-07T00:04:02",
+        "dataAtualizacao": "2021-08-07T00:04:02"
+      },
+      "orgaoSubRogado": null,
+      "unidadeSubRogada": null,
+      "amparoLegal": {
+        "id": 1,
+        "nome": "Lei 14.133/2021, Art. 28, I",
+        "descricao": "pregão: modalidade de licitação obrigatória para aquisição de bens e serviços comuns",
+        "dataInclusao": "2021-07-29T12:44:48",
+        "dataAtualizacao": "2021-07-29T12:44:48",
+        "statusAtivo": true,
+        "justificativaAtualizacao": null
+      },
+      "modoDisputa": {
+        "id": 3,
+        "nome": "Aberto-Fechado",
+        "descricao": null,
+        "dataInclusao": "2021-07-28T09:11:47",
+        "dataAtualizacao": "2021-07-28T09:11:47",
+        "statusAtivo": true,
+        "justificativaAtualizacao": null
+      },
+      "linkSistemaOrigem": "https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=acompanhamento-compra&compra=15812705000482023",
+      "excluido": false,
+      "atributoControle": 0,
+      "justificativaPresencial": null,
+      "existeResultado": false,
+      "numeroControle": "10662072000158-1-000039/2023"
     },
-    {
-      "codigo": "-98",
-      "descricao": "Concorrência Internacional - Registro de Preço"
-    },
-    {
-      "codigo": "-97",
-      "descricao": "Concorrência - Registro de Preço"
-    },
-    {
-      "codigo": "1",
-      "descricao": "Convite"
-    },
-    {
-      "codigo": "2",
-      "descricao": "Tomada de Preços"
-    },
-    {
-      "codigo": "3",
-      "descricao": "Concorrência"
-    },
-    {
-      "codigo": "4",
-      "descricao": "Concorrência Internacional"
-    },
-    {
-      "codigo": "5",
-      "descricao": "Pregão"
-    },
-    {
-      "codigo": "6",
-      "descricao": "Dispensa de Licitação"
-    },
-    {
-      "codigo": "7",
-      "descricao": "Inexigibilidade de Licitação"
-    },
-    {
-      "codigo": "20",
-      "descricao": "Concurso"
-    },
-    {
-      "codigo": "22",
-      "descricao": "Tomada de Preços por Técnica e Preço"
-    },
-    {
-      "codigo": "33",
-      "descricao": "Concorrência por Técnica e Preço"
-    },
-    {
-      "codigo": "44",
-      "descricao": "Concorrência Internacional por Técnica e Preço"
-    }
-  ]
+    "numeroAtaRegistroPreco": "00048",
+    "anoAta": 2023,
+    "dataPublicacaoPncp": "2023-12-22T08:49:40",
+    "dataAssinatura": "2023-12-22",
+    "cancelado": false,
+    "dataInclusao": "2023-12-22T08:49:40",
+    "dataAtualizacao": "2023-12-22T08:49:40",
+    "dataVigenciaInicio": "2023-12-23",
+    "dataVigenciaFim": "2024-12-23",
+    "sequencialAta": 1,
+    "dataCancelamento": null,
+    "excluido": false,
+    "atributoControle": 0,
+    "numeroControlePNCP": "10662072000158-1-000039/2023-000001"
+  },
+  "orgaoEntidade": {
+    "cnpj": "10662072000158",
+    "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+    "esferaId": "F",
+    "poderId": "E"
+  },
+  "orgaoSubRogado": null,
+  "unidadeOrgao": {
+    "ufNome": "Rio Grande do Sul",
+    "codigoUnidade": "158127",
+    "nomeUnidade": "INST.FEDERAL DE EDUC.,CIENC.E TEC.FARROUPILHA",
+    "ufSigla": "RS",
+    "municipioNome": "Santa Maria",
+    "codigoIbge": "4316907"
+  },
+  "unidadeSubRogada": null,
+  "modalidadeNome": "Pregão - Eletrônico",
+  "objetoCompra": "Aquisição de equipamentos de processamento de dados",
+  "informacaoComplementarCompra": " Para as respostas de esclarecimentos e impugnações deste edital acesse o link: https://cnetmobile.estaleiro.serpro.gov.br/comprasnet-web/public/landing?destino=quadro-informativo&compra=15812705000482023",
+  "usuarioNome": "Compras.gov.br",
+  "numeroControlePncpCompra": "10662072000158-1-000039/2023"
+}

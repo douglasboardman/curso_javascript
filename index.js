@@ -1,37 +1,24 @@
 const axios = require('axios');
-const puppeteer = require('puppeteer');
 
-const BASE_URL = 'https://pncp.gov.br';
+const BASE_URL = 'https://pncp.gov.br/api/pncp/v1';
 const cnpjIFFar = '10662072000158';
-const ano = '2022';
-const sequencial = '1';
-const url = `${BASE_URL}/app/editais/${cnpjIFFar}/${ano}/${sequencial}`;
+const pathDadosAta = (ano, sequencialCompra, sequencialAta) => `/orgaos/${cnpjIFFar}/compras/${ano}/${sequencialCompra}/atas/${sequencialAta}`; 
 
-async function coletaCodPNCP(data) {
-    const rgxCodPNCP = /\d{14}-\d-\d{6}\/\d{4}/;
-    const matches = String(data).match(rgxCodPNCP);
-    return matches[0];
+async function getData(path) {
+    const url = `${BASE_URL}${path}`;
+    let response;
+    try {
+        response = await axios.get(url);
+        return response.data
+    } catch (error) {
+        return error.data;
+    }
 }
 
-// coletaCodPNCP(1);
+console.time('coletaDadosAta');
 
-async function getData() {
-    const browser = await puppeteer.launch({
-      ignoreHTTPSErrors: true,
-      headless: "new",
+getData(pathDadosAta(2023,1,1)).then(
+    response => {
+        console.log(response);
+        console.timeEnd('coletaDadosAta')
     });
-    const page = await browser.newPage();
-    await page.goto(url, { waitUntil: "networkidle0" });
-    const data = await page.content();
-    await browser.close();
-    return data;
-}
-
-console.time('coletaCodPNCP');
-
-getData().then(
-    data => coletaCodPNCP(data).then(codPNCP => {
-        console.log(codPNCP);
-        console.timeEnd('coletaCodPNCP');
-    })
-);
