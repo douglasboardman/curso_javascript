@@ -1,59 +1,37 @@
-const axios = require("axios");
+const axios = require('axios');
+const puppeteer = require('puppeteer');
 
-const BASE_URL = "https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes";
-const codOrgao = 26420;
-const codLicitacao = '889585757';
-const dataInicial = "01/05/2023";
-const datafinal = "31/05/2023";
+const BASE_URL = 'https://pncp.gov.br';
+const cnpjIFFar = '10662072000158';
+const ano = '2022';
+const sequencial = '1';
+const url = `${BASE_URL}/app/editais/${cnpjIFFar}/${ano}/${sequencial}`;
 
-const strPeriodo = (pag) => {
-  const dataIni = dataInicial.split('/');
-  const dataFim = datafinal.split('/');
-  
-  let dIni = {
-    dia: String(dataIni[0]),
-    mes: String(dataIni[1]),
-    ano: String(dataIni[2])
-  }
-
-  let dFim = {
-    dia: String(dataFim[0]),
-    mes: String(dataFim[1]),
-    ano: String(dataFim[2])
-  }
-  
-  return `?dataInicial=${dIni.dia}%2F${dIni.mes}%2F${dIni.ano}&dataFinal=${dFim.dia}%2F${dFim.mes}%2F${dFim.ano}&codigoOrgao=${codOrgao}&pagina=${pag}`;
+async function coletaCodPNCP(data) {
+    const rgxCodPNCP = /\d{14}-\d-\d{6}\/\d{4}/;
+    const matches = String(data).match(rgxCodPNCP);
+    return matches[0];
 }
 
-const axiosOptions = {
-  headers: {
-    "accept": '/',
-    "chave-api-dados": '55c2e0e0e45362fa469aaab45c36751b'
-  },
+// coletaCodPNCP(1);
+
+async function getData() {
+    const browser = await puppeteer.launch({
+      ignoreHTTPSErrors: true,
+      headless: "new",
+    });
+    const page = await browser.newPage();
+    await page.goto(url, { waitUntil: "networkidle0" });
+    const data = await page.content();
+    await browser.close();
+    return data;
 }
 
-const getPage = async (path) => {
-  const url = `${BASE_URL}${path}`;
+console.time('coletaCodPNCP');
 
-  const content = await axios.get(url, axiosOptions);
-  return content;
-}
-
-licitacoesPorPeriodo = async () => {
-  const dadosLicitacoes = await getPage(strPeriodo(1));
-  console.log(dadosLicitacoes.data);
-}
-
-licitacaoPorId = async () => {
-  const dadosLicitacao = await getPage('/' + codLicitacao);
-  console.log(dadosLicitacao.data);
-} 
-
-itensLicitacaoPorId = async () => {
-   const itensLicitacao = await getPage('/itens-licitados?id=' + codLicitacao);
-   console.log(itensLicitacao.data);
-}
-
-// itensLicitacaoPorId();
-
-licitacaoPorId();
+getData().then(
+    data => coletaCodPNCP(data).then(codPNCP => {
+        console.log(codPNCP);
+        console.timeEnd('coletaCodPNCP');
+    })
+);
