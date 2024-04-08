@@ -1,3 +1,5 @@
+// API UI: https://pncp.gov.br/api/pncp/swagger-ui/index.html
+
 const axios = require('axios');
 
 const BASE_URL = 'https://pncp.gov.br/api/pncp/v1';
@@ -9,16 +11,16 @@ async function getData(path) {
     let response;
     try {
         response = await axios.get(url);
-        return response.data
+        return {error: false, message: 'Dados coletados com sucesso!', data: response.data};
     } catch (error) {
-        return error.data;
+        return {error: true, message: error.message, data: []};
     }
 }
 
 console.time('coletaDadosAta');
 
-getData(pathDadosAta(2023,1,1)).then(
+getData(pathDadosAta(2023,25,1)).then(
     response => {
-        console.log(response);
+        console.log(response.message);
         console.timeEnd('coletaDadosAta')
     });
