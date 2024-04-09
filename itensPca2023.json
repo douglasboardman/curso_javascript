@@ -1,0 +1,310 @@
+[
+    {
+      "id": 29343,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "154628",
+      "nomeUnidade": "INST.FED.DE EDUC.CIENC.E TEC.CÂMPUS JAGUARI",
+      "municipio": {
+        "id": 4829,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Jaguari",
+        "codigoIbge": "4311106",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2022-05-23T09:50:11",
+      "dataAtualizacao": "2022-05-23T09:50:11"
+    },
+    {
+      "id": 7035,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "155081",
+      "nomeUnidade": "CAMPUS SANTO ANGELO INST. FED. FARROUPILHA",
+      "municipio": {
+        "id": 4980,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Santo Ângelo",
+        "codigoIbge": "4317509",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7041,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "155570",
+      "nomeUnidade": "CAMPUS FREDERICO WESTPHALEN",
+      "municipio": {
+        "id": 4780,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Frederico Westphalen",
+        "codigoIbge": "4308508",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7042,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158127",
+      "nomeUnidade": "INST.FEDERAL DE EDUC.,CIENC.E TEC.FARROUPILHA",
+      "municipio": {
+        "id": 4971,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Santa Maria",
+        "codigoIbge": "4316907",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7038,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158266",
+      "nomeUnidade": "INST.FED.FARROUPILHA/CAMPUS SANTO AUGUSTO",
+      "municipio": {
+        "id": 4985,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Santo Augusto",
+        "codigoIbge": "4317806",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7034,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158267",
+      "nomeUnidade": "INST.FED.FARROUPILHA/CAMPUS ALEGRETE",
+      "municipio": {
+        "id": 4612,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Alegrete",
+        "codigoIbge": "4300406",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7036,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158268",
+      "nomeUnidade": "INST.FED.FARROUPILHA/CAMPUS SÃO VICENTE",
+      "municipio": {
+        "id": 5024,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "São Vicente do Sul",
+        "codigoIbge": "4319802",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7040,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158269",
+      "nomeUnidade": "INST.FED.FARROUP./CAMPUS JULIO DE CASTILHOS",
+      "municipio": {
+        "id": 4833,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Júlio de Castilhos",
+        "codigoIbge": "4311205",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7039,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158503",
+      "nomeUnidade": "INST FED.DE EDUC. CIENC.E.TEC.FARROUPILHA",
+      "municipio": {
+        "id": 4988,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "São Borja",
+        "codigoIbge": "4318002",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7043,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158504",
+      "nomeUnidade": "INST FED.DE EDUC. CIENC.E.TEC.FARROUPILHA",
+      "municipio": {
+        "id": 4976,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Santa Rosa",
+        "codigoIbge": "4317202",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    },
+    {
+      "id": 7037,
+      "orgao": {
+        "id": 60595,
+        "cnpj": "10662072000158",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO, CIENCIA E TECNOLOGIA FARROUPILHA",
+        "cnpjEnteResponsavel": null,
+        "poderId": "E",
+        "esferaId": "F",
+        "validado": true,
+        "dataValidacao": "2021-07-28T09:13:50"
+      },
+      "codigoUnidade": "158505",
+      "nomeUnidade": "INST FED.DE EDUC. CIENC.E.TEC.FARROUPILHA",
+      "municipio": {
+        "id": 4903,
+        "uf": {
+          "siglaUF": "RS",
+          "nomeUF": "Rio Grande do Sul",
+          "dataHoraRegistro": "2021-07-28T09:11:47"
+        },
+        "nome": "Panambi",
+        "codigoIbge": "4313904",
+        "dataHoraRegistro": "2021-07-28T09:12:08"
+      },
+      "dataInclusao": "2021-08-07T00:04:02",
+      "dataAtualizacao": "2021-08-07T00:04:02"
+    }
+  ]

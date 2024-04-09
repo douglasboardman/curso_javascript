@@ -1,8 +1,23 @@
-export class Ata {
+class Ata {
+    /**
+     * @type {string}
+     */
+    #numPregao;
+
     /**
      * @type {string}
      */
     #numControlePNCP;
+
+    /**
+     * @type {string}
+     */
+    #numCompra;
+
+    /**
+     * @type {string}
+     */
+    #numAta;
 
     /**
      * @type {string}
@@ -39,15 +54,18 @@ export class Ata {
      */
     #sequencialAta;
 
-    constructor(anoCompra, sequencialCompra, sequencialAta, iniVigencia, fimVigencia, numControlePNCP, modalidade, objetoCompra) {
+    constructor(anoCompra, sequencialCompra, sequencialAta, iniVigencia, fimVigencia, numControlePNCP, numCompra, numAta, modalidade, objetoCompra) {
         this.#anoCompra = anoCompra;
         this.#sequencialCompra = sequencialCompra;
         this.#sequencialAta = sequencialAta;
         this.#iniVigencia = new Date(iniVigencia);
         this.#fimVigencia = new Date(fimVigencia);
         this.#numControlePNCP = numControlePNCP;
+        this.#numCompra = numCompra;
+        this.#numAta = numAta;
         this.#modalidade = modalidade;
         this.#objetoCompra = objetoCompra;
+        this.#numPregao = numCompra + "/" + anoCompra;
     }
 
     get iniVigencia() {
@@ -98,6 +116,22 @@ export class Ata {
         this.#numControlePNCP = valor;
     }
 
+    get numCompra() {
+        return this.#numCompra;
+    }
+
+    set numCompra(valor) {
+        this.#numCompra = valor;
+    }
+
+    get numAta() {
+        return this.#numAta;
+    }
+
+    set numAta(valor) {
+        this.#numAta = valor;
+    }
+
     get modalidade() {
         return this.#modalidade;
     }
@@ -113,5 +147,14 @@ export class Ata {
     set objetoCompra(valor) {
         this.#objetoCompra = valor;
     }
+
+    /**
+     * @type {string}
+     */
+    get numPregao() {
+        return this.#numPregao;
+    }
 }
+
+module.exports = Ata;
 
